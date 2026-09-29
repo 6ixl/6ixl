@@ -91,13 +91,8 @@ function header() {
     ${layer(215, 14, 1.5, C.lilac, 0.10, 16)}
     ${layer(232, 12, 3.2, C.purple, 0.18, 10)}
   </g>
-  <g transform="translate(600 42)">
-    <rect x="-108" y="-17" width="216" height="34" rx="17" fill="${C.bg}" fill-opacity=".45" stroke="${C.lilac}" stroke-opacity=".8"/>
-    <circle cx="-86" cy="0" r="5" fill="#86efac"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
-    <text x="10" y="6" text-anchor="middle" font-family="${MONO}" font-size="15" font-weight="700" fill="${C.pale}" letter-spacing="2">VIBE MODE: ON</text>
-  </g>
-  <text x="600" y="158" text-anchor="middle" font-family="${SANS}" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
-  <text x="600" y="206" text-anchor="middle" font-family="${SANS}" font-size="22" font-weight="600" fill="${C.pale}" letter-spacing="6">VIBE CODER · GAME DEV · GODOT · JS</text>
+  <text x="600" y="148" text-anchor="middle" font-family="${SANS}" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
+  <text x="600" y="198" text-anchor="middle" font-family="${SANS}" font-size="22" font-weight="600" fill="${C.pale}" letter-spacing="6">VIBE CODER · GAME DEV · GODOT · JS</text>
   `);
 }
 
@@ -121,11 +116,7 @@ function typing() {
     body += `
     <clipPath id="c${i}"><rect x="${x0}" y="0" height="${H}" width="0">
       <animate attributeName="width" values="0;0;${w};${w};0;0" keyTimes="${keys}" dur="${total}s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="${x0}" y="37" font-family="${MONO}" font-size="${FS}" font-weight="600" fill="url(#tg)" clip-path="url(#c${i})" textLength="${w}" lengthAdjust="spacingAndGlyphs">${esc(line)}</text>
-    <rect y="12" width="3" height="30" rx="1.5" fill="${C.lilac}" opacity="0">
-      <animate attributeName="x" values="${x0};${x0};${x0 + w};${x0 + w};${x0};${x0}" keyTimes="${keys}" dur="${total}s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;${t(s)};${t(end)};${t(end + 0.01)}" dur="${total}s" repeatCount="indefinite"/>
-    </rect>`;
+    <text x="${x0}" y="37" font-family="${MONO}" font-size="${FS}" font-weight="600" fill="url(#tg)" clip-path="url(#c${i})" textLength="${w}" lengthAdjust="spacingAndGlyphs">${esc(line)}</text>`;
   });
   return svg(W, H, `
   <defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="${C.lilac}"/><stop offset="1" stop-color="${C.bright}"/></linearGradient></defs>
@@ -462,7 +453,7 @@ save("about.svg", about());
 save("vibe.svg", vibe());
 save("flow.svg", flow());
 save("footer.svg", footer());
-for (const [f, t] of [["sec-vibe", "вайб"], ["sec-about", "обо мне"], ["sec-stack", "стек"], ["sec-projects", "проекты"], ["sec-stats", "статистика"]]) {
+for (const [f, t] of [["sec-about", "обо мне"], ["sec-stack", "стек"], ["sec-projects", "проекты"], ["sec-stats", "статистика"]]) {
   save(`${f}.svg`, section(t));
 }
 project({

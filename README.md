@@ -10,8 +10,6 @@
   <img src="https://komarev.com/ghpvc/?username=6ixl&color=7c3aed&style=for-the-badge&label=%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B" alt="просмотры"/>
 </p>
 
-<p align="center"><img src="assets/sec-vibe.svg" width="720" alt="вайб"/></p>
-
 <p align="center">
   <img src="assets/vibe.svg" width="100%" alt="эквалайзер и пластинка"/>
 </p>
