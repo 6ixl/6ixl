@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="56" viewBox="0 0 900 56" fill="none">
+  <defs>
+    <linearGradient id="ll" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed" stop-opacity="0"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+    <linearGradient id="lr" x1="0" x2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+    <linearGradient id="tx" x1="0" x2="1"><stop offset="0" stop-color="#e9d5ff"/><stop offset=".5" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+  </defs>
+  <rect x="120" y="27" width="204.5" height="2" fill="url(#ll)"/>
+  <rect x="575.5" y="27" width="204.5" height="2" fill="url(#lr)"/>
+  <path d="M336.5 20 L342.5 28 L336.5 36 L330.5 28 Z" fill="#c084fc"/><path d="M563.5 20 L569.5 28 L563.5 36 L557.5 28 Z" fill="#c084fc"/>
+  <text x="450" y="37" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" fill="url(#tx)" letter-spacing="3">ОБО МНЕ</text></svg>

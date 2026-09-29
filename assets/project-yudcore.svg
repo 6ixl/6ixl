@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="230" viewBox="0 0 440 230" fill="none">
+  
+  <defs>
+    <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="pcf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c0a45"/><stop offset="1" stop-color="#0d0221"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="438" height="228" rx="16" fill="url(#pcf)" stroke="url(#pcb)" stroke-width="2"/>
+  <defs><linearGradient id="ic" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></linearGradient></defs>
+  <rect x="28" y="26" width="44" height="44" rx="12" fill="url(#ic)"/>
+  <g transform="translate(50 48)" stroke="#f5f3ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M-11 -6 Q0 -16 11 -6"/><path d="M0 -11 L0 12"/></g>
+  <text x="86" y="46" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#f5f3ff">YudCore</text>
+  <text x="86" y="66" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#a78bfa">2D-копалка · Godot 4</text>
+  <text x="412" y="46" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#c084fc">↗</text>
+  <text x="28" y="104" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Прокопайся до ядра Земли (5000 м), затем лети на</text><text x="28" y="125" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Луну, Марс, Европу, Титан и Венеру. Биомы, вода и</text><text x="28" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">лава, плавильня, сплавы, перерождения и древо</text><text x="28" y="167" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">прокачки.</text>
+  <rect x="28" y="186" width="88.60000000000001" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
+    <text x="72.30000000000001" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Godot 4.7</text><rect x="124.60000000000001" y="186" width="81.2" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
+    <text x="165.20000000000002" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">GDScript</text><rect x="213.8" y="186" width="73.80000000000001" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
+    <text x="250.70000000000002" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Windows</text><rect x="295.6" y="186" width="44.2" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
+    <text x="317.70000000000005" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Web</text></svg>

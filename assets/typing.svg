@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="56" viewBox="0 0 900 56" fill="none">
+  <defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+  
+    <clipPath id="c0"><rect x="220" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;461;461;0;0" keyTimes="0;0.0005;0.0805;0.1705;0.1995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="220" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c0)" textLength="461" lengthAdjust="spacingAndGlyphs">Привет! Я 6ixl — разработчик игр</text>
+    <rect y="12" width="3" height="30" rx="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="x" values="220;220;681;681;220;220" keyTimes="0;0.0005;0.0805;0.1705;0.1995;1" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.0005;0.1995;0.2000" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <clipPath id="c1"><rect x="220" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;461;461;0;0" keyTimes="0;0.2005;0.2805;0.3705;0.3995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="220" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c1)" textLength="461" lengthAdjust="spacingAndGlyphs">Делаю игры на Godot и JavaScript</text>
+    <rect y="12" width="3" height="30" rx="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="x" values="220;220;681;681;220;220" keyTimes="0;0.2005;0.2805;0.3705;0.3995;1" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2005;0.3995;0.4000" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <clipPath id="c2"><rect x="277" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;346;346;0;0" keyTimes="0;0.4005;0.4805;0.5705;0.5995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="277" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c2)" textLength="346" lengthAdjust="spacingAndGlyphs">375 мини-игр в одном APK</text>
+    <rect y="12" width="3" height="30" rx="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="x" values="277;277;623;623;277;277" keyTimes="0;0.4005;0.4805;0.5705;0.5995;1" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.4005;0.5995;0.6000" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <clipPath id="c3"><rect x="241" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;418;418;0;0" keyTimes="0;0.6005;0.6805;0.7705;0.7995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="241" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c3)" textLength="418" lengthAdjust="spacingAndGlyphs">Копаю до ядра Земли в YudCore</text>
+    <rect y="12" width="3" height="30" rx="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="x" values="241;241;659;659;241;241" keyTimes="0;0.6005;0.6805;0.7705;0.7995;1" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.6005;0.7995;0.8000" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <clipPath id="c4"><rect x="249" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;403;403;0;0" keyTimes="0;0.8005;0.8805;0.9705;0.9995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="249" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c4)" textLength="403" lengthAdjust="spacingAndGlyphs">Обожаю процедурную генерацию</text>
+    <rect y="12" width="3" height="30" rx="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="x" values="249;249;652;652;249;249" keyTimes="0;0.8005;0.8805;0.9705;0.9995;1" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.8005;0.9995;1.0000" dur="20s" repeatCount="indefinite"/>
+    </rect></svg>

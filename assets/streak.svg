@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="170" viewBox="0 0 900 170" fill="none">
+  
+  <defs>
+    <linearGradient id="skb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="skf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c0a45"/><stop offset="1" stop-color="#0d0221"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="898" height="168" rx="16" fill="url(#skf)" stroke="url(#skb)" stroke-width="2"/>
+  <defs><linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#e9d5ff"/></linearGradient></defs>
+  
+    <text x="160" y="92" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#f5f3ff">953</text>
+    <text x="160" y="124" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#c084fc">вклад за год</text>
+  <path d="M300 40 V130 M600 40 V130" stroke="#2e1065" stroke-width="2"/>
+  <circle cx="450" cy="84" r="48" stroke="#7c3aed" stroke-width="6"/>
+  <path d="M450 18 C462 30 466 38 458 46 C466 44 470 38 470 34 C478 44 474 58 450 62 C426 58 424 42 438 30 C438 38 442 42 446 42 C440 34 442 26 450 18 Z" fill="url(#fl)" transform="translate(450 60) scale(.42) translate(-451 -40)"/>
+  <text x="450" y="104" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="800" fill="#f5f3ff">1</text>
+  <text x="450" y="152" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#c084fc">текущая серия, дней</text>
+  
+    <text x="740" y="92" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#f5f3ff">6</text>
+    <text x="740" y="124" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#c084fc">лучшая серия, дней</text></svg>
