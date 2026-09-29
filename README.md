@@ -13,7 +13,7 @@
 <p align="center"><img src="assets/sec-vibe.svg" width="720" alt="вайб"/></p>
 
 <p align="center">
-  <img src="assets/vibe.svg" width="100%" alt="VIBE LEVEL: MAX — вайбкодер"/>
+  <img src="assets/vibe.svg" width="100%" alt="эквалайзер и пластинка"/>
 </p>
 
 <p align="center">

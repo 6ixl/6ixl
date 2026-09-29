@@ -215,16 +215,16 @@ function project({ file, title, sub, desc, tags, icon }) {
   ${pills}`));
 }
 
-// ---------- Вайб-метр: эквалайзер, уровень вайба и пластинка ----------
+// ---------- Вайб: эквалайзер и пластинка ----------
 function vibe() {
-  const W = 900, H = 240;
+  const W = 900, H = 200, base = 168;
   let bars = "";
-  for (let i = 0; i < 18; i++) {
-    const x = 44 + i * 14, hs = Array.from({ length: 6 }, () => Math.round(14 + rnd() * 110));
-    const vals = [...hs, hs[0]].map((h) => `${180 - h}`).join(";");
+  for (let i = 0; i < 38; i++) {
+    const x = 48 + i * 16, hs = Array.from({ length: 6 }, () => Math.round(16 + rnd() * 116));
+    const vals = [...hs, hs[0]].map((h) => `${base - h}`).join(";");
     const hv = [...hs, hs[0]].join(";");
     const dur = (0.9 + rnd() * 0.9).toFixed(2);
-    bars += `<rect x="${x}" y="${180 - hs[0]}" width="10" height="${hs[0]}" rx="3" fill="url(#eq)">
+    bars += `<rect x="${x}" y="${base - hs[0]}" width="11" height="${hs[0]}" rx="3" fill="url(#eq)">
       <animate attributeName="y" values="${vals}" dur="${dur}s" repeatCount="indefinite"/>
       <animate attributeName="height" values="${hv}" dur="${dur}s" repeatCount="indefinite"/></rect>`;
   }
@@ -234,24 +234,11 @@ function vibe() {
   ${cardFrame(W, H, "vb")}
   <defs>
     <linearGradient id="eq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.pale}"/><stop offset=".5" stop-color="${C.bright}"/><stop offset="1" stop-color="${C.violet}"/></linearGradient>
-    <linearGradient id="pb" x1="0" x2="1"><stop offset="0" stop-color="${C.violet}"/><stop offset="1" stop-color="${C.pale}"/></linearGradient>
     <radialGradient id="lbl"><stop offset="0" stop-color="${C.pale}"/><stop offset="1" stop-color="${C.purple}"/></radialGradient>
-    <filter id="vg" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <text x="44" y="40" font-family="${MONO}" font-size="13" font-weight="700" fill="${C.muted}" letter-spacing="2">NOW CODING</text>
-  <rect x="40" y="182" width="252" height="2" rx="1" fill="${C.deep}"/>
+  <rect x="44" y="${base + 2}" width="612" height="2" rx="1" fill="${C.deep}"/>
   ${bars}
-  <text x="44" y="210" font-family="${SANS}" font-size="13" fill="${C.muted}">частота вайба: 432 Гц</text>
-
-  <text x="450" y="58" text-anchor="middle" font-family="${MONO}" font-size="14" font-weight="700" fill="${C.muted}" letter-spacing="4">VIBE LEVEL</text>
-  <text x="450" y="132" text-anchor="middle" font-family="${SANS}" font-size="72" font-weight="900" fill="${C.white}" filter="url(#vg)" letter-spacing="4">MAX
-    <animate attributeName="opacity" values="1;.75;1" dur="2s" repeatCount="indefinite"/></text>
-  <rect x="340" y="156" width="220" height="10" rx="5" fill="${C.deep}"/>
-  <rect x="340" y="156" width="0" height="10" rx="5" fill="url(#pb)">
-    <animate attributeName="width" values="0;220;220" keyTimes="0;.5;1" dur="3s" fill="freeze"/></rect>
-  <text x="450" y="194" text-anchor="middle" font-family="${SANS}" font-size="14" font-weight="600" fill="${C.lilac}">вайбкодер · 100% вайба · 0% стресса</text>
-
-  <g transform="translate(760 108)">
+  <g transform="translate(772 100)">
     <circle r="70" fill="#0a0118" stroke="${C.purple}" stroke-width="2"/>
     <g>
       ${grooves}
@@ -263,8 +250,7 @@ function vibe() {
     <circle r="3" fill="${C.bg}"/>
     <path d="M78 -62 L60 -10 L34 14" stroke="${C.pale}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="78" cy="-62" r="7" fill="${C.purple}" stroke="${C.pale}" stroke-width="2"/>
-  </g>
-  <text x="760" y="210" text-anchor="middle" font-family="${SANS}" font-size="13" fill="${C.muted}">lo-fi beats to vibe code to</text>`);
+  </g>`);
 }
 
 // ---------- Как я делаю игры: идея → промпт → код → релиз ----------
