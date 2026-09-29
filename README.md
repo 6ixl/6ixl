@@ -10,6 +10,16 @@
   <img src="https://komarev.com/ghpvc/?username=6ixl&color=7c3aed&style=for-the-badge&label=%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B" alt="просмотры"/>
 </p>
 
+<p align="center"><img src="assets/sec-vibe.svg" width="720" alt="вайб"/></p>
+
+<p align="center">
+  <img src="assets/vibe.svg" width="100%" alt="VIBE LEVEL: MAX — вайбкодер"/>
+</p>
+
+<p align="center">
+  <img src="assets/flow.svg" width="100%" alt="идея → промпт → код → релиз"/>
+</p>
+
 <p align="center"><img src="assets/sec-about.svg" width="720" alt="обо мне"/></p>
 
 <p align="center">
@@ -19,6 +29,9 @@
 <p align="center"><img src="assets/sec-stack.svg" width="720" alt="стек"/></p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Vibe_Coding-c084fc?style=for-the-badge&logoColor=2e1065" alt="Vibe Coding"/>
+  <img src="https://img.shields.io/badge/Claude_Code-a855f7?style=for-the-badge&logo=claude&logoColor=f5f3ff" alt="Claude Code"/>
+  <br/>
   <img src="https://img.shields.io/badge/Godot-2e1065?style=for-the-badge&logo=godotengine&logoColor=c084fc" alt="Godot"/>
   <img src="https://img.shields.io/badge/GDScript-3b0764?style=for-the-badge&logo=godotengine&logoColor=d8b4fe" alt="GDScript"/>
   <img src="https://img.shields.io/badge/JavaScript-4c1d95?style=for-the-badge&logo=javascript&logoColor=e9d5ff" alt="JavaScript"/>

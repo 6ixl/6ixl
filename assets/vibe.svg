@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" fill="none">
+  
+  <defs>
+    <linearGradient id="vbb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="vbf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c0a45"/><stop offset="1" stop-color="#0d0221"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="898" height="238" rx="16" fill="url(#vbf)" stroke="url(#vbb)" stroke-width="2"/>
+  <defs>
+    <linearGradient id="eq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9d5ff"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+    <linearGradient id="pb" x1="0" x2="1"><stop offset="0" stop-color="#5b21b6"/><stop offset="1" stop-color="#e9d5ff"/></linearGradient>
+    <radialGradient id="lbl"><stop offset="0" stop-color="#e9d5ff"/><stop offset="1" stop-color="#7c3aed"/></radialGradient>
+    <filter id="vg" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <text x="44" y="40" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#a78bfa" letter-spacing="2">NOW CODING</text>
+  <rect x="40" y="182" width="252" height="2" rx="1" fill="#2e1065"/>
+  <rect x="44" y="87" width="10" height="93" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="87;81;70;118;118;131;87" dur="1.03s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="93;99;110;62;62;49;93" dur="1.03s" repeatCount="indefinite"/></rect><rect x="58" y="118" width="10" height="62" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="118;83;61;75;97;109;118" dur="0.90s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="62;97;119;105;83;71;62" dur="0.90s" repeatCount="indefinite"/></rect><rect x="72" y="63" width="10" height="117" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="63;106;144;84;126;117;63" dur="1.03s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="117;74;36;96;54;63;117" dur="1.03s" repeatCount="indefinite"/></rect><rect x="86" y="150" width="10" height="30" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="150;131;64;83;90;86;150" dur="1.20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="30;49;116;97;90;94;30" dur="1.20s" repeatCount="indefinite"/></rect><rect x="100" y="115" width="10" height="65" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="115;103;95;142;85;93;115" dur="1.07s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="65;77;85;38;95;87;65" dur="1.07s" repeatCount="indefinite"/></rect><rect x="114" y="146" width="10" height="34" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="146;76;127;73;63;69;146" dur="1.22s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="34;104;53;107;117;111;34" dur="1.22s" repeatCount="indefinite"/></rect><rect x="128" y="130" width="10" height="50" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="130;137;104;81;77;73;130" dur="1.23s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="50;43;76;99;103;107;50" dur="1.23s" repeatCount="indefinite"/></rect><rect x="142" y="159" width="10" height="21" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="159;144;130;91;79;97;159" dur="1.59s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="21;36;50;89;101;83;21" dur="1.59s" repeatCount="indefinite"/></rect><rect x="156" y="136" width="10" height="44" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="136;98;76;163;123;126;136" dur="1.69s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="44;82;104;17;57;54;44" dur="1.69s" repeatCount="indefinite"/></rect><rect x="170" y="101" width="10" height="79" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="101;136;131;60;86;122;101" dur="1.33s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="79;44;49;120;94;58;79" dur="1.33s" repeatCount="indefinite"/></rect><rect x="184" y="152" width="10" height="28" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="152;159;144;74;83;132;152" dur="0.91s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="28;21;36;106;97;48;28" dur="0.91s" repeatCount="indefinite"/></rect><rect x="198" y="164" width="10" height="16" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="164;142;137;99;66;120;164" dur="1.30s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="16;38;43;81;114;60;16" dur="1.30s" repeatCount="indefinite"/></rect><rect x="212" y="80" width="10" height="100" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="80;158;60;140;72;104;80" dur="1.08s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="100;22;120;40;108;76;100" dur="1.08s" repeatCount="indefinite"/></rect><rect x="226" y="162" width="10" height="18" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="162;107;108;112;150;69;162" dur="1.72s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="18;73;72;68;30;111;18" dur="1.72s" repeatCount="indefinite"/></rect><rect x="240" y="83" width="10" height="97" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="83;79;109;134;142;158;83" dur="1.79s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="97;101;71;46;38;22;97" dur="1.79s" repeatCount="indefinite"/></rect><rect x="254" y="144" width="10" height="36" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="144;65;69;104;76;150;144" dur="1.54s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="36;115;111;76;104;30;36" dur="1.54s" repeatCount="indefinite"/></rect><rect x="268" y="136" width="10" height="44" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="136;62;146;58;158;61;136" dur="1.71s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="44;118;34;122;22;119;44" dur="1.71s" repeatCount="indefinite"/></rect><rect x="282" y="78" width="10" height="102" rx="3" fill="url(#eq)">
+      <animate attributeName="y" values="78;81;59;138;123;147;78" dur="1.03s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="102;99;121;42;57;33;102" dur="1.03s" repeatCount="indefinite"/></rect>
+  <text x="44" y="210" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#a78bfa">частота вайба: 432 Гц</text>
+
+  <text x="450" y="58" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#a78bfa" letter-spacing="4">VIBE LEVEL</text>
+  <text x="450" y="132" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="900" fill="#f5f3ff" filter="url(#vg)" letter-spacing="4">MAX
+    <animate attributeName="opacity" values="1;.75;1" dur="2s" repeatCount="indefinite"/></text>
+  <rect x="340" y="156" width="220" height="10" rx="5" fill="#2e1065"/>
+  <rect x="340" y="156" width="0" height="10" rx="5" fill="url(#pb)">
+    <animate attributeName="width" values="0;220;220" keyTimes="0;.5;1" dur="3s" fill="freeze"/></rect>
+  <text x="450" y="194" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#c084fc">вайбкодер · 100% вайба · 0% стресса</text>
+
+  <g transform="translate(760 108)">
+    <circle r="70" fill="#0a0118" stroke="#7c3aed" stroke-width="2"/>
+    <g>
+      <circle r="30" stroke="#2a1454" stroke-width="1.2"/><circle r="36" stroke="#2a1454" stroke-width="1.2"/><circle r="42" stroke="#2a1454" stroke-width="1.2"/><circle r="48" stroke="#2a1454" stroke-width="1.2"/><circle r="54" stroke="#2a1454" stroke-width="1.2"/><circle r="60" stroke="#2a1454" stroke-width="1.2"/><circle r="66" stroke="#2a1454" stroke-width="1.2"/>
+      <path d="M0 -68 A68 68 0 0 1 48 -48 L0 0 Z" fill="#c084fc" opacity=".08"/>
+      <circle r="22" fill="url(#lbl)"/>
+      <text y="4" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="9" font-weight="700" fill="#0d0221">6ixl</text>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/>
+    </g>
+    <circle r="3" fill="#0d0221"/>
+    <path d="M78 -62 L60 -10 L34 14" stroke="#e9d5ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="78" cy="-62" r="7" fill="#7c3aed" stroke="#e9d5ff" stroke-width="2"/>
+  </g>
+  <text x="760" y="210" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#a78bfa">lo-fi beats to vibe code to</text></svg>

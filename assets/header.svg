@@ -4,8 +4,9 @@
       <stop offset="0" stop-color="#12032b"/><stop offset=".45" stop-color="#3b0764"/><stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
     <radialGradient id="glow"><stop offset="0" stop-color="#c084fc" stop-opacity=".55"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></radialGradient>
-    <linearGradient id="title" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9d5ff"/>
+    <linearGradient id="title" gradientUnits="userSpaceOnUse" x1="420" y1="0" x2="780" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#e9d5ff"/><stop offset=".45" stop-color="#ffffff"/><stop offset=".5" stop-color="#c084fc"/><stop offset=".55" stop-color="#ffffff"/><stop offset="1" stop-color="#e9d5ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-400 0;400 0" dur="4s" repeatCount="indefinite"/>
     </linearGradient>
     <filter id="neon" x="-20%" y="-50%" width="140%" height="200%">
       <feGaussianBlur stdDeviation="10" result="b"/>
@@ -23,6 +24,11 @@
     <path d="M0 232 L0 231.3 L20 230.1 L40 228.8 L60 227.6 L80 226.5 L100 225.4 L120 224.4 L140 223.5 L160 222.6 L180 221.9 L200 221.3 L220 220.8 L240 220.4 L260 220.1 L280 220.0 L300 220.0 L320 220.2 L340 220.4 L360 220.8 L380 221.3 L400 222.0 L420 222.7 L440 223.6 L460 224.5 L480 225.5 L500 226.6 L520 227.8 L540 229.0 L560 230.2 L580 231.4 L600 232.7 L620 233.9 L640 235.2 L660 236.4 L680 237.5 L700 238.6 L720 239.6 L740 240.5 L760 241.4 L780 242.1 L800 242.7 L820 243.2 L840 243.6 L860 243.9 L880 244.0 L900 244.0 L920 243.8 L940 243.6 L960 243.2 L980 242.7 L1000 242.0 L1020 241.3 L1040 240.4 L1060 239.5 L1080 238.5 L1100 237.4 L1120 236.2 L1140 235.0 L1160 233.8 L1180 232.6 L1200 231.3 L1220 230.1 L1240 228.8 L1260 227.6 L1280 226.5 L1300 225.4 L1320 224.4 L1340 223.5 L1360 222.6 L1380 221.9 L1400 221.3 L1420 220.8 L1440 220.4 L1460 220.1 L1480 220.0 L1500 220.0 L1520 220.2 L1540 220.4 L1560 220.8 L1580 221.3 L1600 222.0 L1620 222.7 L1640 223.6 L1660 224.5 L1680 225.5 L1700 226.6 L1720 227.8 L1740 229.0 L1760 230.2 L1780 231.4 L1800 232.7 L1820 233.9 L1840 235.2 L1860 236.4 L1880 237.5 L1900 238.6 L1920 239.6 L1940 240.5 L1960 241.4 L1980 242.1 L2000 242.7 L2020 243.2 L2040 243.6 L2060 243.9 L2080 244.0 L2100 244.0 L2120 243.8 L2140 243.6 L2160 243.2 L2180 242.7 L2200 242.0 L2220 241.3 L2240 240.4 L2260 239.5 L2280 238.5 L2300 237.4 L2320 236.2 L2340 235.0 L2360 233.8 L2380 232.6 L2400 231.3 L2400 320 L0 320 Z" fill="#7c3aed" opacity="0.18">
       <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="10s" repeatCount="indefinite"/></path>
   </g>
-  <text x="600" y="150" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
-  <text x="600" y="200" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#e9d5ff" letter-spacing="6">GAME DEVELOPER · GODOT · JAVASCRIPT</text>
+  <g transform="translate(600 42)">
+    <rect x="-108" y="-17" width="216" height="34" rx="17" fill="#0d0221" fill-opacity=".45" stroke="#c084fc" stroke-opacity=".8"/>
+    <circle cx="-86" cy="0" r="5" fill="#86efac"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
+    <text x="10" y="6" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#e9d5ff" letter-spacing="2">VIBE MODE: ON</text>
+  </g>
+  <text x="600" y="158" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
+  <text x="600" y="206" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#e9d5ff" letter-spacing="6">VIBE CODER · GAME DEV · GODOT · JS</text>
   </svg>
