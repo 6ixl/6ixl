@@ -92,19 +92,18 @@ function header() {
     ${layer(232, 12, 3.2, C.purple, 0.18, 10)}
   </g>
   <text x="600" y="148" text-anchor="middle" font-family="${SANS}" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
-  <text x="600" y="198" text-anchor="middle" font-family="${SANS}" font-size="22" font-weight="600" fill="${C.pale}" letter-spacing="6">VIBE CODER · GAME DEV · GODOT · JS</text>
+  <text x="600" y="198" text-anchor="middle" font-family="${SANS}" font-size="22" font-weight="600" fill="${C.pale}" letter-spacing="6">GAME DEVELOPER · GODOT · JAVASCRIPT</text>
   `);
 }
 
 // ---------- Печатающаяся строка ----------
 function typing() {
   const lines = [
-    "Привет! Я 6ixl — вайбкодер",
-    "Идея → промпт → игра → релиз",
-    "Пишу код на вайбе вместе с ИИ",
+    "Привет! Я 6ixl — разработчик игр",
+    "Делаю игры на Godot и JavaScript",
     "375 мини-игр в одном APK",
     "Копаю до ядра Земли в YudCore",
-    "Не баг, а вайб",
+    "Обожаю процедурную генерацию",
   ];
   const W = 900, H = 56, FS = 24, CW = FS * 0.6, slot = 4, total = slot * lines.length;
   const t = (s) => (s / total).toFixed(4);
@@ -142,20 +141,18 @@ function section(title) {
 
 // ---------- «Обо мне» в виде окна редактора ----------
 function about() {
-  const W = 900, H = 342;
+  const W = 900, H = 290;
   const k = (s) => `<tspan fill="#f472b6">${esc(s)}</tspan>`;
   const p = (s) => `<tspan fill="${C.muted}">${esc(s)}</tspan>`;
   const s = (x) => `<tspan fill="#86efac">${esc(x)}</tspan>`;
   const v = (x) => `<tspan fill="${C.lilac}">${esc(x)}</tspan>`;
   const code = [
     `${k("const")} ${v("sixl")} ${p("=")} ${p("{")}`,
-    `  ${v("role")}${p(":")}      ${s('"vibe coder"')}${p(" + ")}${s('"game developer"')}${p(",")}`,
-    `  ${v("copilot")}${p(":")}   ${s('"ИИ, который пишет код, пока я ловлю вайб"')}${p(",")}`,
-    `  ${v("workflow")}${p(":")}  ${p("[")}${s('"идея"')}${p(", ")}${s('"промпт"')}${p(", ")}${s('"код"')}${p(", ")}${s('"релиз"')}${p("],")}`,
+    `  ${v("role")}${p(":")}      ${s('"game developer"')}${p(",")}`,
     `  ${v("engines")}${p(":")}   ${p("[")}${s('"Godot 4"')}${p(", ")}${s('"HTML5 Canvas"')}${p(", ")}${s('"Capacitor"')}${p("],")}`,
     `  ${v("languages")}${p(":")} ${p("[")}${s('"GDScript"')}${p(", ")}${s('"JavaScript"')}${p(", ")}${s('"Python"')}${p("],")}`,
     `  ${v("focus")}${p(":")}     ${s('"офлайн-игры, процедурная генерация, баланс"')}${p(",")}`,
-    `  ${v("motto")}${p(":")}     ${s('"не баг, а вайб"')}${p(",")}`,
+    `  ${v("motto")}${p(":")}     ${s('"копай глубже"')}${p(",")}`,
     `${p("};")}`,
   ];
   const text = code
@@ -168,7 +165,7 @@ function about() {
   <circle cx="30" cy="26" r="7" fill="${C.lilac}"/><circle cx="54" cy="26" r="7" fill="${C.bright}"/><circle cx="78" cy="26" r="7" fill="${C.violet}"/>
   <text x="450" y="31" text-anchor="middle" font-family="${MONO}" font-size="14" fill="${C.muted}">about-me.js</text>
   ${text}
-  <rect x="${70 + 16 * 0.6 * 30}" y="${96 + 7 * 26 - 15}" width="9" height="19" fill="${C.lilac}"><animate attributeName="opacity" values="1;0" dur="1s" calcMode="discrete" repeatCount="indefinite"/></rect>`);
+  <rect x="${70 + 16 * 0.6 * 28}" y="${96 + 5 * 26 - 15}" width="9" height="19" fill="${C.lilac}"><animate attributeName="opacity" values="1;0" dur="1s" calcMode="discrete" repeatCount="indefinite"/></rect>`);
 }
 
 // ---------- Карточки проектов ----------
@@ -206,8 +203,8 @@ function project({ file, title, sub, desc, tags, icon }) {
   ${pills}`));
 }
 
-// ---------- Вайб: эквалайзер и пластинка ----------
-function vibe() {
+// ---------- Музыка: эквалайзер и пластинка ----------
+function music() {
   const W = 900, H = 200, base = 168;
   let bars = "";
   for (let i = 0; i < 38; i++) {
@@ -244,38 +241,6 @@ function vibe() {
   </g>`);
 }
 
-// ---------- Как я делаю игры: идея → промпт → код → релиз ----------
-function flow() {
-  const W = 900, H = 170;
-  const steps = [["идея", "приходит в голову"], ["промпт", "описываю вайб"], ["код", "пишет ИИ"], ["релиз", "игра готова"]];
-  const xs = [120, 340, 560, 780];
-  let body = "";
-  for (let i = 0; i < 3; i++) {
-    const a = xs[i] + 78, b = xs[i + 1] - 78;
-    body += `<path d="M${a} 86 H${b}" stroke="${C.deep}" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
-    <path d="M${b - 8} 80 L${b} 86 L${b - 8} 92" stroke="${C.purple}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
-    for (let k = 0; k < 3; k++) {
-      body += `<circle r="4" fill="${C.pale}" opacity="0"><animateMotion path="M${a} 86 H${b - 10}" dur="1.8s" begin="${(k * 0.6 + i * 0.2).toFixed(1)}s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;1;0" dur="1.8s" begin="${(k * 0.6 + i * 0.2).toFixed(1)}s" repeatCount="indefinite"/></circle>`;
-    }
-  }
-  steps.forEach(([t, sub], i) => {
-    const x = xs[i];
-    body += `<g>
-      <rect x="${x - 78}" y="50" width="156" height="72" rx="14" fill="#1c0a45" stroke="url(#fb)" stroke-width="2"/>
-      <circle cx="${x - 78}" cy="50" r="13" fill="${C.purple}" stroke="${C.pale}" stroke-width="2"/>
-      <text x="${x - 78}" y="55" text-anchor="middle" font-family="${SANS}" font-size="13" font-weight="800" fill="${C.white}">${i + 1}</text>
-      <text x="${x}" y="86" text-anchor="middle" font-family="${SANS}" font-size="20" font-weight="800" fill="${C.white}">${esc(t)}</text>
-      <text x="${x}" y="108" text-anchor="middle" font-family="${SANS}" font-size="12" fill="${C.muted}">${esc(sub)}</text>
-      <animate attributeName="opacity" values="1;.55;1" dur="2.4s" begin="${i * 0.6}s" repeatCount="indefinite"/>
-    </g>`;
-  });
-  return svg(W, H, `
-  <defs><linearGradient id="fb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.lilac}"/><stop offset="1" stop-color="${C.violet}"/></linearGradient></defs>
-  ${body}
-  <text x="450" y="156" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${C.muted}">while (true) { vibe(); ship(); }</text>`);
-}
-
 // ---------- Подвал ----------
 function footer() {
   const W = 1200, H = 150;
@@ -287,7 +252,7 @@ function footer() {
   ${layer(50, 12, 0, "url(#fg)", 0.35, 14)}
   ${layer(70, 14, 2, "url(#fg)", 0.6, 10)}
   ${layer(90, 10, 4, "url(#fg)", 1, 18)}
-  <text x="600" y="130" text-anchor="middle" font-family="${SANS}" font-size="18" font-weight="600" fill="${C.white}" letter-spacing="2">спасибо, что заглянул · stay vibing  ♥</text>`);
+  <text x="600" y="130" text-anchor="middle" font-family="${SANS}" font-size="18" font-weight="600" fill="${C.white}" letter-spacing="2">спасибо, что заглянул  ♥</text>`);
 }
 
 // ---------- Статистика ----------
@@ -450,8 +415,7 @@ function heatmap(weeks) {
 save("header.svg", header());
 save("typing.svg", typing());
 save("about.svg", about());
-save("vibe.svg", vibe());
-save("flow.svg", flow());
+save("music.svg", music());
 save("footer.svg", footer());
 for (const [f, t] of [["sec-about", "обо мне"], ["sec-stack", "стек"], ["sec-projects", "проекты"], ["sec-stats", "статистика"]]) {
   save(`${f}.svg`, section(t));

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/typing.svg" width="720" alt="Привет! Я 6ixl — вайбкодер"/>
+  <img src="assets/typing.svg" width="720" alt="Привет! Я 6ixl — разработчик игр"/>
 </p>
 
 <p align="center">
@@ -11,25 +11,18 @@
 </p>
 
 <p align="center">
-  <img src="assets/vibe.svg" width="100%" alt="эквалайзер и пластинка"/>
-</p>
-
-<p align="center">
-  <img src="assets/flow.svg" width="100%" alt="идея → промпт → код → релиз"/>
+  <img src="assets/music.svg" width="100%" alt="эквалайзер и пластинка"/>
 </p>
 
 <p align="center"><img src="assets/sec-about.svg" width="720" alt="обо мне"/></p>
 
 <p align="center">
-  <img src="assets/about.svg" width="720" alt="const sixl = { role: 'vibe coder', ... }"/>
+  <img src="assets/about.svg" width="720" alt="const sixl = { role: 'game developer', ... }"/>
 </p>
 
 <p align="center"><img src="assets/sec-stack.svg" width="720" alt="стек"/></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Vibe_Coding-c084fc?style=for-the-badge&logoColor=2e1065" alt="Vibe Coding"/>
-  <img src="https://img.shields.io/badge/Claude_Code-a855f7?style=for-the-badge&logo=claude&logoColor=f5f3ff" alt="Claude Code"/>
-  <br/>
   <img src="https://img.shields.io/badge/Godot-2e1065?style=for-the-badge&logo=godotengine&logoColor=c084fc" alt="Godot"/>
   <img src="https://img.shields.io/badge/GDScript-3b0764?style=for-the-badge&logo=godotengine&logoColor=d8b4fe" alt="GDScript"/>
   <img src="https://img.shields.io/badge/JavaScript-4c1d95?style=for-the-badge&logo=javascript&logoColor=e9d5ff" alt="JavaScript"/>

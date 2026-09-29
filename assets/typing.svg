@@ -1,21 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="56" viewBox="0 0 900 56" fill="none">
   <defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
   
-    <clipPath id="c0"><rect x="263" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;374;374;0;0" keyTimes="0;0.0004;0.0671;0.1421;0.1662;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="263" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c0)" textLength="374" lengthAdjust="spacingAndGlyphs">Привет! Я 6ixl — вайбкодер</text>
-    <clipPath id="c1"><rect x="249" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;403;403;0;0" keyTimes="0;0.1671;0.2337;0.3088;0.3329;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="249" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c1)" textLength="403" lengthAdjust="spacingAndGlyphs">Идея → промпт → игра → релиз</text>
-    <clipPath id="c2"><rect x="241" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;418;418;0;0" keyTimes="0;0.3337;0.4004;0.4754;0.4996;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="241" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c2)" textLength="418" lengthAdjust="spacingAndGlyphs">Пишу код на вайбе вместе с ИИ</text>
-    <clipPath id="c3"><rect x="277" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;346;346;0;0" keyTimes="0;0.5004;0.5671;0.6421;0.6662;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="277" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c3)" textLength="346" lengthAdjust="spacingAndGlyphs">375 мини-игр в одном APK</text>
-    <clipPath id="c4"><rect x="241" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;418;418;0;0" keyTimes="0;0.6671;0.7338;0.8087;0.8329;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="241" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c4)" textLength="418" lengthAdjust="spacingAndGlyphs">Копаю до ядра Земли в YudCore</text>
-    <clipPath id="c5"><rect x="349" y="0" height="56" width="0">
-      <animate attributeName="width" values="0;0;202;202;0;0" keyTimes="0;0.8338;0.9004;0.9754;0.9996;1" dur="24s" repeatCount="indefinite"/></rect></clipPath>
-    <text x="349" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c5)" textLength="202" lengthAdjust="spacingAndGlyphs">Не баг, а вайб</text></svg>
+    <clipPath id="c0"><rect x="220" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;461;461;0;0" keyTimes="0;0.0005;0.0805;0.1705;0.1995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="220" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c0)" textLength="461" lengthAdjust="spacingAndGlyphs">Привет! Я 6ixl — разработчик игр</text>
+    <clipPath id="c1"><rect x="220" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;461;461;0;0" keyTimes="0;0.2005;0.2805;0.3705;0.3995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="220" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c1)" textLength="461" lengthAdjust="spacingAndGlyphs">Делаю игры на Godot и JavaScript</text>
+    <clipPath id="c2"><rect x="277" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;346;346;0;0" keyTimes="0;0.4005;0.4805;0.5705;0.5995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="277" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c2)" textLength="346" lengthAdjust="spacingAndGlyphs">375 мини-игр в одном APK</text>
+    <clipPath id="c3"><rect x="241" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;418;418;0;0" keyTimes="0;0.6005;0.6805;0.7705;0.7995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="241" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c3)" textLength="418" lengthAdjust="spacingAndGlyphs">Копаю до ядра Земли в YudCore</text>
+    <clipPath id="c4"><rect x="249" y="0" height="56" width="0">
+      <animate attributeName="width" values="0;0;403;403;0;0" keyTimes="0;0.8005;0.8805;0.9705;0.9995;1" dur="20s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="249" y="37" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="24" font-weight="600" fill="url(#tg)" clip-path="url(#c4)" textLength="403" lengthAdjust="spacingAndGlyphs">Обожаю процедурную генерацию</text></svg>

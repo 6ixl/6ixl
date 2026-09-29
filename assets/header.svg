@@ -25,5 +25,5 @@
       <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="10s" repeatCount="indefinite"/></path>
   </g>
   <text x="600" y="148" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="112" font-weight="800" fill="url(#title)" filter="url(#neon)" letter-spacing="4">6ixl</text>
-  <text x="600" y="198" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#e9d5ff" letter-spacing="6">VIBE CODER · GAME DEV · GODOT · JS</text>
+  <text x="600" y="198" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#e9d5ff" letter-spacing="6">GAME DEVELOPER · GODOT · JAVASCRIPT</text>
   </svg>
