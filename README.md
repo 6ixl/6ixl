@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/typing.svg" width="720" alt="Привет! Я 6ixl — разработчик игр"/>
+  <img src="assets/typing.svg" width="720" alt="Привет! Я 6ixl — вайбкодер"/>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 <p align="center"><img src="assets/sec-about.svg" width="720" alt="обо мне"/></p>
 
 <p align="center">
-  <img src="assets/about.svg" width="720" alt="const sixl = { role: 'game developer', ... }"/>
+  <img src="assets/about.svg" width="720" alt="const sixl = { role: 'vibe coder', ... }"/>
 </p>
 
 <p align="center"><img src="assets/sec-stack.svg" width="720" alt="стек"/></p>
