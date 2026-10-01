@@ -16,7 +16,7 @@
   <path d="M300 40 V130 M600 40 V130" stroke="#2e1065" stroke-width="2"/>
   <circle cx="450" cy="84" r="48" stroke="#7c3aed" stroke-width="6"/>
   <path d="M450 18 C462 30 466 38 458 46 C466 44 470 38 470 34 C478 44 474 58 450 62 C426 58 424 42 438 30 C438 38 442 42 446 42 C440 34 442 26 450 18 Z" fill="url(#fl)" transform="translate(450 60) scale(.42) translate(-451 -40)"/>
-  <text x="450" y="104" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="800" fill="#f5f3ff">1</text>
+  <text x="450" y="104" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="800" fill="#f5f3ff">0</text>
   <text x="450" y="152" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#c084fc">текущая серия, дней</text>
   
     <text x="740" y="92" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#f5f3ff">3</text>
