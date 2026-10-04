@@ -104,6 +104,31 @@ function icon(x, y, s, id) {
 }
 const iglowDef = `<radialGradient id="iglow"><stop offset=".55" stop-color="${C.bright}" stop-opacity=".55"/><stop offset="1" stop-color="${C.bright}" stop-opacity="0"/></radialGradient>`;
 
+// Слой звёзд, медленно плывущий влево; копия справа делает движение бесшовным.
+function drift(n, w, h, dur) {
+  let dots = "";
+  for (let i = 0; i < n; i++) {
+    const x = (rnd() * w).toFixed(0), y = (rnd() * h).toFixed(0), r = (rnd() * 0.7 + 0.3).toFixed(1), o = (rnd() * 0.5 + 0.2).toFixed(2);
+    dots += `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.pale}" opacity="${o}"/>`;
+  }
+  return `<g><animateTransform attributeName="transform" type="translate" from="0 0" to="-${w} 0" dur="${dur}s" repeatCount="indefinite"/>
+    ${dots}<g transform="translate(${w} 0)">${dots}</g></g>`;
+}
+
+// Созвездие: линии прорисовываются, держатся и гаснут, звёзды в узлах мерцают.
+function constellation(pts, dur) {
+  let len = 0;
+  for (let i = 1; i < pts.length; i++) len += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+  const L = len.toFixed(0);
+  const nodes = pts.map(([x, y], i) => `
+    <circle cx="${x}" cy="${y}" r="2.2" fill="${C.white}"><animate attributeName="opacity" values=".4;1;.4" dur="${(2.5 + i * 0.4).toFixed(1)}s" repeatCount="indefinite"/></circle>
+    <circle cx="${x}" cy="${y}" r="6" fill="${C.lilac}" opacity=".15"/>`).join("");
+  return `
+  <polyline points="${pts.map((p) => p.join(",")).join(" ")}" stroke="${C.lilac}" stroke-opacity=".45" stroke-width="1" stroke-dasharray="${L}" stroke-dashoffset="${L}">
+    <animate attributeName="stroke-dashoffset" values="${L};0;0;${L}" keyTimes="0;.35;.85;1" dur="${dur}s" repeatCount="indefinite"/>
+  </polyline>${nodes}`;
+}
+
 // Маленькая планета с кольцом.
 function planet(px, py, r, id) {
   return `
@@ -141,13 +166,19 @@ function hero() {
       <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
     <clipPath id="hf"><rect width="${W}" height="${H}" rx="22"/></clipPath>
+    <clipPath id="card"><rect x="${cx - 150}" y="${cy - 120}" width="300" height="250" rx="22"/></clipPath>
+    <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".09"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.lilac}"/><stop offset="1" stop-color="${C.lilac}" stop-opacity="0"/></linearGradient>
+    <filter id="soft" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
     ${iglowDef}${cometDef}
   </defs>
   <g clip-path="url(#hf)">
     <rect width="${W}" height="${H}" fill="${C.space}"/>
     <rect width="${W}" height="${H}" fill="url(#n1)"><animate attributeName="opacity" values=".75;1;.75" dur="9s" repeatCount="indefinite"/></rect>
     <rect width="${W}" height="${H}" fill="url(#n2)"/>
-    ${stars(120, 0, 0, W, H)}
+    ${drift(70, W, H, 140)}
+    ${stars(90, 0, 0, W, H)}
+    ${constellation([[470, 300], [520, 270], [585, 288], [640, 250], [700, 268], [745, 230]], 12)}
     ${sparkle(560, 110, 6, 4, 0)}${sparkle(1170, 360, 5, 5, 2)}${sparkle(760, 300, 4, 6, 3)}
     ${comet(700, 40, 110, 8, 1.5)}${comet(420, 70, 80, 11, 6)}
     <ellipse cx="${cx}" cy="${cy}" rx="330" ry="120" stroke="${C.lilac}" stroke-opacity=".18" transform="rotate(-12 ${cx} ${cy})"/>
@@ -162,6 +193,8 @@ function hero() {
   <circle cx="1110" cy="42" r="3.5" fill="${C.lilac}"/><circle cx="1128" cy="42" r="3.5" fill="${C.bright}"/><circle cx="1146" cy="42" r="3.5" fill="${C.violet}"/>
   <rect x="40" y="66" width="1120" height="1" fill="${C.line}"/>
 
+  <text x="42" y="182" font-family="${SANS}" font-size="104" font-weight="700" fill="${C.bright}" letter-spacing="-1" filter="url(#soft)" opacity=".55">6ixl
+    <animate attributeName="opacity" values=".35;.7;.35" dur="4s" repeatCount="indefinite"/></text>
   <text x="42" y="182" font-family="${SANS}" font-size="104" font-weight="700" fill="url(#name)" letter-spacing="-1">6ixl</text>
   <text x="48" y="224" font-family="${SANS}" font-size="24" fill="${C.pale}" opacity=".85">Games, interfaces &amp; tiny universes.</text>
   <rect x="48" y="248" width="196" height="38" rx="19" fill="${C.deep}" fill-opacity=".6" stroke="${C.purple}" stroke-opacity=".6"/>
@@ -178,10 +211,69 @@ function hero() {
     <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="6s" repeatCount="indefinite"/>
     <rect x="${cx - 150}" y="${cy - 120}" width="300" height="250" rx="22" fill="${C.card}" fill-opacity=".75"/>
     <rect x="${cx - 150}" y="${cy - 120}" width="300" height="250" rx="22" stroke="url(#pb)" stroke-width="1.4"/>
+    <g clip-path="url(#card)">
+      <circle cx="${cx}" cy="${cy - 18}" r="98" stroke="url(#orb)" stroke-width="1.2" stroke-dasharray="120 496">
+        <animateTransform attributeName="transform" type="rotate" from="0 ${cx} ${cy - 18}" to="360 ${cx} ${cy - 18}" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="${cx}" cy="${cy - 18}" r="98" stroke="${C.lilac}" stroke-opacity=".1"/>
+      <rect x="${cx - 260}" y="${cy - 140}" width="90" height="300" fill="url(#shine)" transform="skewX(-18)">
+        <animate attributeName="x" values="${cx - 260};${cx - 260};${cx + 260}" keyTimes="0;.55;1" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
     ${icon(cx - 82, cy - 100, 164, "hi")}
     <text x="${cx - 128}" y="${cy + 108}" font-family="${SANS}" font-size="16" font-weight="700" fill="${C.white}">YudUi</text>
     ${lbl(cx + 128, cy + 107, "DESKTOP / REIMAGINED", C.muted, "end", 9)}
   </g>`);
+}
+
+// Мини-рабочий стол YudUi: окно сворачивается в док, иконки дока увеличиваются волной.
+function miniDock(x0, y0) {
+  const icons = 5, iw = 16, ig = 8, dockW = icons * iw + (icons - 1) * ig + 18;
+  const dockX = x0 + (210 - dockW) / 2, dockY = y0 + 116;
+  const target = dockX + 9 + 2 * (iw + ig) + iw / 2, ay = dockY - 12;
+  const shades = [C.lilac, C.bright, C.purple, C.violet, C.pale];
+  let dock = "";
+  for (let i = 0; i < icons; i++) {
+    const cx = dockX + 9 + i * (iw + ig) + iw / 2;
+    dock += `
+    <g transform="translate(${cx} ${dockY - 5})"><g>
+      <animateTransform attributeName="transform" type="scale" values="1;1;1.45;1;1" keyTimes="0;${(i * 0.08).toFixed(2)};${(i * 0.08 + 0.1).toFixed(2)};${(i * 0.08 + 0.2).toFixed(2)};1" dur="4s" repeatCount="indefinite"/>
+      <rect x="${-iw / 2}" y="${-iw}" width="${iw}" height="${iw}" rx="4.5" fill="${shades[i]}" opacity=".9"/>
+    </g></g>
+    ${i % 2 === 0 ? `<circle cx="${cx}" cy="${dockY - 1}" r="1.2" fill="${C.pale}"/>` : ""}`;
+  }
+  const wx = x0 + 22, wy = y0 + 8, ww = 166, wh = 70;
+  return `
+  <rect x="${x0}" y="${y0}" width="210" height="${dockY - y0 + 10}" rx="14" fill="${C.space}" fill-opacity=".55" stroke="${C.line}"/>
+  <g transform="translate(${target} ${ay})"><g>
+    <animateTransform attributeName="transform" type="scale" values="1;1;.04;.04;1.06;1;1" keyTimes="0;.42;.52;.66;.76;.82;1" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;.45;.52;.66;.72;1" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(${-target} ${-ay})">
+      <rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" rx="8" fill="${C.card}" stroke="${C.line}"/>
+      <circle cx="${wx + 11}" cy="${wy + 10}" r="3.2" fill="${C.lilac}"/><circle cx="${wx + 21}" cy="${wy + 10}" r="3.2" fill="${C.bright}"/><circle cx="${wx + 31}" cy="${wy + 10}" r="3.2" fill="${C.violet}"/>
+      <rect x="${wx + 11}" y="${wy + 30}" width="80" height="4" rx="2" fill="${C.line}"/>
+      <rect x="${wx + 11}" y="${wy + 46}" width="56" height="4" rx="2" fill="${C.line}"/>
+      <rect x="${wx + ww - 32}" y="${wy + 27}" width="20" height="10" rx="5" fill="${C.purple}"/>
+      <circle cx="${wx + ww - 17}" cy="${wy + 32}" r="3.4" fill="${C.white}"/>
+    </g>
+  </g></g>
+  <rect x="${dockX}" y="${dockY - 27}" width="${dockW}" height="31" rx="10" fill="${C.card}" fill-opacity=".9" stroke="${C.line}"/>
+  ${dock}`;
+}
+
+// YudCore: бур ползёт по шахте к светящемуся ядру.
+function miniDrill(x, y) {
+  const len = 150;
+  return `
+  <defs><radialGradient id="mcore"><stop offset="0" stop-color="${C.pale}"/><stop offset=".45" stop-color="${C.bright}" stop-opacity=".6"/><stop offset="1" stop-color="${C.bright}" stop-opacity="0"/></radialGradient></defs>
+  <path d="M${x} ${y} H${x + len}" stroke="${C.line}" stroke-dasharray="2 4"/>
+  <rect x="${x}" y="${y - 0.75}" width="0" height="1.5" fill="${C.lilac}" opacity=".7">
+    <animate attributeName="width" values="0;${len - 10};${len - 10};0" keyTimes="0;.8;.95;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <path d="M-8 -5 V5 L3 0 Z" fill="${C.pale}">
+    <animateTransform attributeName="transform" type="translate" values="${x} ${y};${x + len - 10} ${y};${x + len - 10} ${y};${x} ${y}" keyTimes="0;.8;.95;1" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="${x + len}" cy="${y}" r="8" fill="url(#mcore)"><animate attributeName="r" values="6;10;6" dur="2.5s" repeatCount="indefinite"/></circle>`;
 }
 
 // ---------- Current focus + toolbox ----------
@@ -218,10 +310,12 @@ function focus() {
   <text x="102" y="108" font-family="${SANS}" font-size="34" font-weight="700" fill="${C.white}">YudUi</text>
   <text x="40" y="154" font-family="${SANS}" font-size="18" fill="${C.pale}">Windows 11, reimagined.</text>
   <text x="40" y="182" font-family="${SANS}" font-size="12" fill="${C.muted}">co-author · desktop customization · motion</text>
-  <rect x="40" y="204" width="500" height="1" fill="${C.line}"/>
+  <rect x="40" y="204" width="515" height="1" fill="${C.line}"/>
   <path d="M44 226 l4 -4 l4 4 l-4 4 Z" fill="${C.lilac}"/>
   <text x="60" y="230" font-family="${SANS}" font-size="13" fill="${C.pale}">YudCore</text>
-  <text x="120" y="230" font-family="${SANS}" font-size="13" fill="${C.muted}">— a game about digging to the core.</text>
+  <text x="120" y="230" font-family="${SANS}" font-size="13" fill="${C.muted}">dig to the core</text>
+  ${miniDock(345, 64)}
+  ${miniDrill(372, 226)}
   ${lbl(tx, 48, "TOOLBOX")}
   ${tiles}
   ${lbl(1160, 230, "YUDUI.DEV ↗", C.lilac, "end", 11)}`);
@@ -262,10 +356,19 @@ function ring(cx, cy, value, label, frac, id) {
   let ticks = "";
   for (let a = 0; a < 360; a += 6) ticks += `<path d="M${cx} ${cy - 50} V${cy - 46}" stroke="${C.line}" transform="rotate(${a} ${cx} ${cy})"/>`;
   return `
-  <defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.pale}"/><stop offset="1" stop-color="${C.purple}"/></linearGradient></defs>
+  <defs>
+    <linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.pale}"/><stop offset="1" stop-color="${C.purple}"/></linearGradient>
+    <radialGradient id="${id}h"><stop offset=".55" stop-color="${C.purple}" stop-opacity=".25"/><stop offset="1" stop-color="${C.purple}" stop-opacity="0"/></radialGradient>
+    <filter id="${id}f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
   <circle cx="${cx}" cy="${cy}" r="${R + 22}" stroke="${C.line}" stroke-opacity=".6"/>
   <circle cx="${cx}" cy="${cy}" r="${R}" fill="${C.space}" stroke="${C.line}" stroke-width="6"/>
   ${ticks}
+  <circle cx="${cx}" cy="${cy}" r="${R + 30}" fill="url(#${id}h)"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="${cx}" cy="${cy}" r="${R}" stroke="url(#${id})" stroke-width="10" stroke-linecap="round" transform="rotate(-90 ${cx} ${cy})" filter="url(#${id}f)" opacity=".7"
+    stroke-dasharray="${L.toFixed(1)}" stroke-dashoffset="${off}">
+    <animate attributeName="stroke-dashoffset" values="${L.toFixed(1)};${off}" dur="1.8s" fill="freeze"/>
+  </circle>
   <circle cx="${cx}" cy="${cy}" r="${R}" stroke="url(#${id})" stroke-width="6" stroke-linecap="round" transform="rotate(-90 ${cx} ${cy})"
     stroke-dasharray="${L.toFixed(1)}" stroke-dashoffset="${off}">
     <animate attributeName="stroke-dashoffset" values="${L.toFixed(1)};${off}" dur="1.8s" fill="freeze"/>
@@ -350,6 +453,8 @@ function mixer(u) {
     <radialGradient id="mxg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 200) scale(520 220)">
       <stop offset="0" stop-color="${C.purple}" stop-opacity=".18"/><stop offset="1" stop-color="${C.purple}" stop-opacity="0"/>
     </radialGradient>
+    <filter id="bglow" x="-50%" y="-20%" width="200%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.lilac}" stop-opacity="0"/><stop offset=".5" stop-color="${C.lilac}" stop-opacity=".6"/><stop offset="1" stop-color="${C.lilac}" stop-opacity="0"/></linearGradient>
     <clipPath id="segs"><rect x="40" y="486" width="1120" height="6" rx="3"/></clipPath>
   </defs>
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="url(#mxg)"/>
@@ -363,7 +468,11 @@ function mixer(u) {
 
   <rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="16" fill="${C.space}" fill-opacity=".55" stroke="${C.line}"/>
   ${lbl(px + 30, py + 34, "ACTIVITY / 28 DAYS", C.lilac, "start", 10)}
+  <g filter="url(#bglow)" opacity=".6">${bars}</g>
   ${bars}
+  <rect x="${px + 24}" y="${py + 50}" width="2" height="132" fill="url(#scan)">
+    <animate attributeName="x" values="${px + 24};${px + pw - 26}" dur="5s" repeatCount="indefinite"/>
+  </rect>
   ${lbl(px + 30, py + 202, last.length ? day(last[0].date) : "", C.muted, "start", 9)}
   ${lbl(px + pw - 30, py + 202, last.length ? day(last[last.length - 1].date) : "", C.muted, "end", 9)}
 
