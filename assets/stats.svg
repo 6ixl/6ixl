@@ -7,27 +7,27 @@
   <rect x="1" y="1" width="898" height="118" rx="18" fill="url(#stn)"/>
   <rect x="1" y="1" width="898" height="118" rx="18" stroke="url(#stb)" stroke-width="1"/>
     <g>
-      <text x="90" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">734</text>
+      <text x="90" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">36</text>
       <text x="90" y="88" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8" letter-spacing="1">вклад за год</text>
     </g>
     
     <g>
-      <text x="270" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">512</text>
+      <text x="270" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">31</text>
       <text x="270" y="88" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8" letter-spacing="1">коммитов</text>
     </g>
     <rect x="180" y="38" width="1" height="50" fill="#24124f"/>
     <g>
-      <text x="450" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">3</text>
+      <text x="450" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">0</text>
       <text x="450" y="88" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8" letter-spacing="1">дней подряд</text>
     </g>
     <rect x="360" y="38" width="1" height="50" fill="#24124f"/>
     <g>
-      <text x="630" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">8</text>
+      <text x="630" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">3</text>
       <text x="630" y="88" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8" letter-spacing="1">лучшая серия</text>
     </g>
     <rect x="540" y="38" width="1" height="50" fill="#24124f"/>
     <g>
-      <text x="810" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">3</text>
+      <text x="810" y="62" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="300" fill="#f5f3ff">0</text>
       <text x="810" y="88" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8" letter-spacing="1">звёзд</text>
     </g>
     <rect x="720" y="38" width="1" height="50" fill="#24124f"/></svg>
