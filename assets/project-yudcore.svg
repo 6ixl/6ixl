@@ -1,23 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="230" viewBox="0 0 440 230" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" fill="none">
   
   <defs>
-    <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#c084fc"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#2e1065"/>
-    </linearGradient>
-    <linearGradient id="pcf" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1c0a45"/><stop offset="1" stop-color="#0d0221"/>
-    </linearGradient>
+    <linearGradient id="ycb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#24124f"/><stop offset="1" stop-color="#24124f"/></linearGradient>
+    <radialGradient id="ycn" cx=".85" cy="0" r="1"><stop offset="0" stop-color="#7c3aed" stop-opacity=".22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect x="1" y="1" width="438" height="228" rx="16" fill="url(#pcf)" stroke="url(#pcb)" stroke-width="2"/>
-  <defs><linearGradient id="ic" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></linearGradient></defs>
-  <rect x="28" y="26" width="44" height="44" rx="12" fill="url(#ic)"/>
-  <g transform="translate(50 48)" stroke="#f5f3ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M-11 -6 Q0 -16 11 -6"/><path d="M0 -11 L0 12"/></g>
-  <text x="86" y="46" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#f5f3ff">YudCore</text>
-  <text x="86" y="66" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#a78bfa">2D-копалка · Godot 4</text>
-  <text x="412" y="46" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#c084fc">↗</text>
-  <text x="28" y="104" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Прокопайся до ядра Земли (5000 м), затем лети на</text><text x="28" y="125" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Луну, Марс, Европу, Титан и Венеру. Биомы, вода и</text><text x="28" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">лава, плавильня, сплавы, перерождения и древо</text><text x="28" y="167" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">прокачки.</text>
-  <rect x="28" y="186" width="88.60000000000001" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
-    <text x="72.30000000000001" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Godot 4.7</text><rect x="124.60000000000001" y="186" width="81.2" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
-    <text x="165.20000000000002" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">GDScript</text><rect x="213.8" y="186" width="73.80000000000001" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
-    <text x="250.70000000000002" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Windows</text><rect x="295.6" y="186" width="44.2" height="24" rx="12" fill="#2e1065" stroke="#7c3aed"/>
-    <text x="317.70000000000005" y="202" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#c084fc">Web</text></svg>
+  <rect x="1" y="1" width="898" height="198" rx="18" fill="#0b0424"/>
+  <rect x="1" y="1" width="898" height="198" rx="18" fill="url(#ycn)"/>
+  <rect x="1" y="1" width="898" height="198" rx="18" stroke="url(#ycb)" stroke-width="1"/>
+  <defs>
+    <clipPath id="mine"><rect x="620" y="24" width="240" height="152" rx="10"/></clipPath>
+    <radialGradient id="core"><stop offset="0" stop-color="#e9d5ff"/><stop offset=".5" stop-color="#a855f7" stop-opacity=".6"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g clip-path="url(#mine)">
+    <rect x="620" y="24" width="240" height="30.9" fill="#2a1458"/><rect x="709" y="31" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="659" y="32" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="684" y="30" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="824" y="34" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="642" y="35" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="682" y="42" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="54.4" width="240" height="30.9" fill="#24104d"/><rect x="639" y="73" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="733" y="62" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="679" y="61" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="679" y="72" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="640" y="65" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="812" y="70" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="84.8" width="240" height="30.9" fill="#1d0c40"/><rect x="794" y="109" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="737" y="98" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="753" y="93" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="730" y="99" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="765" y="95" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="710" y="104" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="115.19999999999999" width="240" height="30.9" fill="#170934"/><rect x="747" y="134" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="652" y="123" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="741" y="136" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="833" y="135" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="687" y="127" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="764" y="121" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="145.6" width="240" height="30.9" fill="#3b0764"/><rect x="681" y="166" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="740" y="160" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="711" y="164" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="639" y="154" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="780" y="152" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="724" y="157" width="4" height="4" fill="#c084fc" opacity="0.9"/>
+    <circle cx="740" cy="176" r="34" fill="url(#core)">
+      <animate attributeName="r" values="28;38;28" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="733" y="24" width="14" height="0" fill="#06021a">
+      <animate attributeName="height" values="0;134;134;0" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <path d="M732 -10 H748 L740 4 Z" fill="#e9d5ff">
+      <animateTransform attributeName="transform" type="translate" values="0 28;0 162;0 162;0 28" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <rect x="620" y="24" width="240" height="152" rx="10" stroke="#24124f"/>
+  <text x="608" y="36" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8">0 м</text>
+  <text x="608" y="176" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#c084fc">5000 м</text>
+
+  <text x="48" y="64" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#f5f3ff">YudCore</text>
+  <text x="195" y="64" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="12" fill="#8b7bb8">2D-копалка · Godot 4</text>
+  <text x="48" y="104" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Прокопайся до ядра Земли — 5000 м, а дальше</text><text x="48" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Луна, Марс, Европа, Титан и Венера.</text>
+  <rect x="48" y="150" width="85" height="24" rx="12" stroke="#24124f"/>
+    <text x="90.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Godot 4.7</text><rect x="141" y="150" width="78" height="24" rx="12" stroke="#24124f"/>
+    <text x="180" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">GDScript</text><rect x="227" y="150" width="71" height="24" rx="12" stroke="#24124f"/>
+    <text x="262.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Windows</text><rect x="306" y="150" width="43" height="24" rx="12" stroke="#24124f"/>
+    <text x="327.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Web</text></svg>
