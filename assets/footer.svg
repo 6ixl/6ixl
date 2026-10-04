@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="70" viewBox="0 0 1200 70" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="40" viewBox="0 0 1200 40" fill="none">
   <defs>
-    <linearGradient id="fl" x1="0" x2="1"><stop offset="0" stop-color="#c084fc" stop-opacity="0"/><stop offset=".5" stop-color="#c084fc" stop-opacity=".5"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></linearGradient>
+    <linearGradient id="fl" x1="0" x2="1"><stop offset="0" stop-color="#c084fc" stop-opacity="0"/><stop offset=".5" stop-color="#c084fc" stop-opacity=".45"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></linearGradient>
     <radialGradient id="fd"><stop offset="0" stop-color="#f5f3ff"/><stop offset=".4" stop-color="#c084fc" stop-opacity=".7"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect x="100" y="22" width="1000" height="1" fill="url(#fl)"/>
-  <circle cx="100" cy="22.5" r="9" fill="url(#fd)">
-    <animate attributeName="cx" values="100;1100" dur="6s" repeatCount="indefinite"/>
+  <rect x="200" y="20" width="800" height="1" fill="url(#fl)"/>
+  <circle cx="200" cy="20.5" r="8" fill="url(#fd)">
+    <animate attributeName="cx" values="200;1000" dur="6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <text x="600" y="54" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="12" fill="#8b7bb8" letter-spacing="4">✦  6ixl  ·  где-то между звёзд  ✦</text></svg>
+  </circle></svg>

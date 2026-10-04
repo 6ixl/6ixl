@@ -1,37 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="180" viewBox="0 0 340 180" fill="none">
   
   <defs>
-    <linearGradient id="ycb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#24124f"/><stop offset="1" stop-color="#24124f"/></linearGradient>
-    <radialGradient id="ycn" cx=".85" cy="0" r="1"><stop offset="0" stop-color="#7c3aed" stop-opacity=".22"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ycb"><stop offset="0" stop-color="#24124f"/></linearGradient>
+    <radialGradient id="ycn" cx=".9" cy="0" r="1"><stop offset="0" stop-color="#7c3aed" stop-opacity=".2"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <clipPath id="ycc"><rect x="1" y="1" width="338" height="178" rx="16"/></clipPath>
   </defs>
-  <rect x="1" y="1" width="898" height="198" rx="18" fill="#0b0424"/>
-  <rect x="1" y="1" width="898" height="198" rx="18" fill="url(#ycn)"/>
-  <rect x="1" y="1" width="898" height="198" rx="18" stroke="url(#ycb)" stroke-width="1"/>
+  <rect x="1" y="1" width="338" height="178" rx="16" fill="#0b0424"/>
+  <rect x="1" y="1" width="338" height="178" rx="16" fill="url(#ycn)"/>
+  <rect x="1" y="1" width="338" height="178" rx="16" stroke="url(#ycb)" stroke-width="1"/>
   <defs>
-    <clipPath id="mine"><rect x="620" y="24" width="240" height="152" rx="10"/></clipPath>
-    <radialGradient id="core"><stop offset="0" stop-color="#e9d5ff"/><stop offset=".5" stop-color="#a855f7" stop-opacity=".6"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core"><stop offset="0" stop-color="#e9d5ff"/><stop offset=".45" stop-color="#a855f7" stop-opacity=".6"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c084fc" stop-opacity="0"/><stop offset="1" stop-color="#c084fc" stop-opacity=".7"/></linearGradient>
   </defs>
-  <g clip-path="url(#mine)">
-    <rect x="620" y="24" width="240" height="30.9" fill="#2a1458"/><rect x="709" y="31" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="659" y="32" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="684" y="30" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="824" y="34" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="642" y="35" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="682" y="42" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="54.4" width="240" height="30.9" fill="#24104d"/><rect x="639" y="73" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="733" y="62" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="679" y="61" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="679" y="72" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="640" y="65" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="812" y="70" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="84.8" width="240" height="30.9" fill="#1d0c40"/><rect x="794" y="109" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="737" y="98" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="753" y="93" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="730" y="99" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="765" y="95" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="710" y="104" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="115.19999999999999" width="240" height="30.9" fill="#170934"/><rect x="747" y="134" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="652" y="123" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="741" y="136" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="833" y="135" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="687" y="127" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="764" y="121" width="4" height="4" fill="#6d28d9" opacity="0.5"/><rect x="620" y="145.6" width="240" height="30.9" fill="#3b0764"/><rect x="681" y="166" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="740" y="160" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="711" y="164" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="639" y="154" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="780" y="152" width="4" height="4" fill="#c084fc" opacity="0.9"/><rect x="724" y="157" width="4" height="4" fill="#c084fc" opacity="0.9"/>
-    <circle cx="740" cy="176" r="34" fill="url(#core)">
-      <animate attributeName="r" values="28;38;28" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="733" y="24" width="14" height="0" fill="#06021a">
-      <animate attributeName="height" values="0;134;134;0" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
-    </rect>
-    <path d="M732 -10 H748 L740 4 Z" fill="#e9d5ff">
-      <animateTransform attributeName="transform" type="translate" values="0 28;0 162;0 162;0 28" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  <rect x="620" y="24" width="240" height="152" rx="10" stroke="#24124f"/>
-  <text x="608" y="36" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#8b7bb8">0 м</text>
-  <text x="608" y="176" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="11" fill="#c084fc">5000 м</text>
-
-  <text x="48" y="64" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#f5f3ff">YudCore</text>
-  <text x="195" y="64" font-family="'JetBrains Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace" font-size="12" fill="#8b7bb8">2D-копалка · Godot 4</text>
-  <text x="48" y="104" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Прокопайся до ядра Земли — 5000 м, а дальше</text><text x="48" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#e9d5ff">Луна, Марс, Европа, Титан и Венера.</text>
-  <rect x="48" y="150" width="85" height="24" rx="12" stroke="#24124f"/>
-    <text x="90.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Godot 4.7</text><rect x="141" y="150" width="78" height="24" rx="12" stroke="#24124f"/>
-    <text x="180" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">GDScript</text><rect x="227" y="150" width="71" height="24" rx="12" stroke="#24124f"/>
-    <text x="262.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Windows</text><rect x="306" y="150" width="43" height="24" rx="12" stroke="#24124f"/>
-    <text x="327.5" y="166" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#c084fc">Web</text></svg>
+  <g clip-path="url(#ycc)"><circle cx="118" cy="11" r="0.4" fill="#c084fc"><animate attributeName="opacity" values=".1;.9;.1" dur="2.2s" begin="-3.3s" repeatCount="indefinite"/></circle><circle cx="266" cy="9" r="1.0" fill="#c084fc"><animate attributeName="opacity" values=".1;.9;.1" dur="4.1s" begin="-1.8s" repeatCount="indefinite"/></circle><circle cx="240" cy="62" r="0.5" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="5.7s" begin="-2.3s" repeatCount="indefinite"/></circle><circle cx="104" cy="90" r="0.4" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="2.7s" begin="-0.4s" repeatCount="indefinite"/></circle><circle cx="99" cy="78" r="0.9" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="3.8s" begin="-1.5s" repeatCount="indefinite"/></circle><circle cx="46" cy="81" r="0.5" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="5.4s" begin="-2.2s" repeatCount="indefinite"/></circle><circle cx="148" cy="133" r="0.8" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="3.1s" begin="-2.0s" repeatCount="indefinite"/></circle><circle cx="127" cy="23" r="1.2" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="4.6s" begin="-3.1s" repeatCount="indefinite"/></circle><circle cx="57" cy="118" r="0.3" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="5.1s" begin="-2.8s" repeatCount="indefinite"/></circle><circle cx="74" cy="59" r="0.9" fill="#c084fc"><animate attributeName="opacity" values=".1;.9;.1" dur="2.3s" begin="-3.6s" repeatCount="indefinite"/></circle><circle cx="101" cy="35" r="0.8" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="4.0s" begin="-1.7s" repeatCount="indefinite"/></circle><circle cx="66" cy="40" r="0.8" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="3.9s" begin="-2.4s" repeatCount="indefinite"/></circle><circle cx="78" cy="154" r="0.6" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="2.3s" begin="-1.9s" repeatCount="indefinite"/></circle><circle cx="270" cy="159" r="0.6" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="4.6s" begin="-2.2s" repeatCount="indefinite"/></circle><circle cx="271" cy="123" r="0.7" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="3.1s" begin="-3.3s" repeatCount="indefinite"/></circle><circle cx="45" cy="141" r="0.6" fill="#f5f3ff"><animate attributeName="opacity" values=".1;.9;.1" dur="3.4s" begin="-4.7s" repeatCount="indefinite"/></circle></g>
+  <path d="M262 30 V150" stroke="#24124f" stroke-dasharray="2 5"/>
+  <circle cx="262" cy="150" r="16" fill="url(#core)">
+    <animate attributeName="r" values="13;19;13" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="261" y="30" width="2" height="0" fill="url(#trail)">
+    <animate attributeName="height" values="0;106;106;0" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <path d="M256 -8 H268 L262 3 Z" fill="#e9d5ff">
+    <animateTransform attributeName="transform" type="translate" values="0 30;0 136;0 136;0 30" keyTimes="0;.8;.95;1" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <text x="38" y="104" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600" fill="#f5f3ff">YudCore</text>
+  <text x="38" y="132" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#8b7bb8">Dig to the core.</text></svg>
