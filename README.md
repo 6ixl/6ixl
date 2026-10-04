@@ -5,7 +5,7 @@
 <p align="center"><img src="assets/sec-projects.svg" width="720" alt="проекты"/></p>
 
 <p align="center">
-  <a href="https://github.com/6ixl/YudUi"><img src="assets/project-yudui.svg" width="100%" alt="YudUi — главный проект"/></a>
+  <a href="https://github.com/MatyanKass/YudUi"><img src="assets/project-yudui.svg" width="100%" alt="YudUi — кастомизация Windows 11"/></a>
 </p>
 
 <p align="center">

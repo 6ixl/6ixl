@@ -13,13 +13,13 @@ mkdirSync(OUT, { recursive: true });
 // ---------- Проекты: правь тексты здесь ----------
 const YUDUI = {
   title: "YudUi",
-  sub: "главный проект",
+  repo: "MatyanKass/YudUi",
   desc: [
-    "Библиотека интерфейсов в моём стиле:",
-    "кнопки, переключатели, окна и анимации,",
-    "которые одинаково выглядят во всех моих играх.",
+    "Кастомизация Windows 11 в одном портативном .exe:",
+    "док вместо панели задач, кнопки окон как в macOS,",
+    "анимации окон, 133 настройки и 14 пресетов.",
   ],
-  tags: ["UI", "компоненты", "анимации"],
+  tags: ["Go", "Wails", "Svelte", "Windows 11"],
 };
 const YUDCORE = {
   title: "YudCore",
@@ -197,50 +197,58 @@ function section(title) {
 // ---------- YudUi: главная карточка ----------
 function yudui() {
   const W = 900, H = 340, p = YUDUI;
-  // Мокап окна с компонентами справа.
-  const mx = 540, my = 62, mw = 310, mh = 220;
+  // Справа мини-рабочий стол: окно с круглыми кнопками сворачивается в док и возвращается, иконки дока увеличиваются волной.
+  const mx = 530, my = 40, mw = 330, mh = 260;
+  const dockY = my + mh - 22, icons = 7, iw = 22, ig = 10;
+  const dockW = icons * iw + (icons - 1) * ig + 24, dockX = mx + (mw - dockW) / 2;
+  const target = dockX + 12 + 2 * (iw + ig) + iw / 2; // окно сворачивается в третью иконку
+  const shades = [C.lilac, C.bright, C.purple, C.violet, C.pale, C.bright, C.lilac];
+  let dock = "";
+  for (let i = 0; i < icons; i++) {
+    const cx = dockX + 12 + i * (iw + ig) + iw / 2;
+    dock += `
+    <g transform="translate(${cx} ${dockY - 6})"><g>
+      <animateTransform attributeName="transform" type="scale" values="1;1;1.45;1;1" keyTimes="0;${(i * 0.06).toFixed(2)};${(i * 0.06 + 0.1).toFixed(2)};${(i * 0.06 + 0.2).toFixed(2)};1" dur="4s" repeatCount="indefinite"/>
+      <rect x="${-iw / 2}" y="${-iw}" width="${iw}" height="${iw}" rx="6" fill="${shades[i]}" opacity="${i === 2 ? 1 : 0.85}"/>
+    </g></g>
+    ${i % 3 !== 1 ? `<circle cx="${cx}" cy="${dockY + 1}" r="1.6" fill="${C.pale}"/>` : ""}`;
+  }
+  // Окно: сворачивание «джинном» в иконку дока и возврат с пружинкой.
+  const wx = mx + 34, wy = my + 22, ww = mw - 68, wh = 150;
+  const toggle = (x, y, on, d) => `
+    <rect x="${x}" y="${y}" width="30" height="16" rx="8" fill="${on ? C.purple : C.deep}">
+      <animate attributeName="fill" values="${C.deep};${C.purple};${C.purple};${C.deep}" keyTimes="0;.15;.6;.75" dur="5s" begin="${d}s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="${x + 8}" cy="${y + 8}" r="5.5" fill="${C.white}">
+      <animate attributeName="cx" values="${x + 8};${x + 22};${x + 22};${x + 8}" keyTimes="0;.15;.6;.75" dur="5s" begin="${d}s" repeatCount="indefinite"/>
+    </circle>`;
+  const row = (y, w, d) => `<rect x="${wx + 18}" y="${y + 5}" width="${w}" height="6" rx="3" fill="${C.line}"/>${toggle(wx + ww - 48, y, false, d)}`;
+  const win = `
+  <g transform="translate(${target} ${dockY - 16})"><g>
+    <animateTransform attributeName="transform" type="scale" values="1;1;.04;.04;1.06;1;1" keyTimes="0;.42;.52;.66;.76;.82;1" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;.45;.52;.66;.72;1" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(${-target} ${-(dockY - 16)})">
+      <rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" rx="10" fill="${C.card}" stroke="${C.line}"/>
+      <path d="M${wx} ${wy + 26} H${wx + ww}" stroke="${C.line}"/>
+      <circle cx="${wx + 16}" cy="${wy + 13}" r="5" fill="${C.lilac}"/>
+      <circle cx="${wx + 31}" cy="${wy + 13}" r="5" fill="${C.bright}"/>
+      <circle cx="${wx + 46}" cy="${wy + 13}" r="5" fill="${C.violet}"/>
+      <g stroke="${C.space}" stroke-width="1.4" stroke-linecap="round" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.2;.25;.4;.42" dur="7s" repeatCount="indefinite"/>
+        <path d="M${wx + 13.5} ${wy + 10.5} l5 5 M${wx + 18.5} ${wy + 10.5} l-5 5 M${wx + 28} ${wy + 13} h6 M${wx + 43.5} ${wy + 10.5} l5 5 M${wx + 43.5} ${wy + 10.5} h3 M${wx + 43.5} ${wy + 10.5} v3"/>
+      </g>
+      <text x="${wx + ww / 2}" y="${wy + 17}" text-anchor="middle" font-family="${MONO}" font-size="10" fill="${C.muted}">YudUi</text>
+      ${row(wy + 42, 90, 0)}
+      ${row(wy + 72, 120, 1.2)}
+      ${row(wy + 102, 70, 2.4)}
+    </g>
+  </g></g>`;
   const ui = `
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="6s" repeatCount="indefinite"/>
-    <rect x="${mx}" y="${my}" width="${mw}" height="${mh}" rx="14" fill="${C.space}" stroke="${C.line}"/>
-    <circle cx="${mx + 20}" cy="${my + 18}" r="4" fill="${C.lilac}"/><circle cx="${mx + 34}" cy="${my + 18}" r="4" fill="${C.purple}"/><circle cx="${mx + 48}" cy="${my + 18}" r="4" fill="${C.deep}"/>
-    <path d="M${mx} ${my + 36} H${mx + mw}" stroke="${C.line}"/>
-
-    <!-- кнопка с пульсом -->
-    <rect x="${mx + 22}" y="${my + 56}" width="130" height="36" rx="10" fill="url(#btn)"/>
-    <rect x="${mx + 22}" y="${my + 56}" width="130" height="36" rx="10" stroke="${C.lilac}" fill="none">
-      <animate attributeName="stroke-opacity" values=".9;0" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="1;8" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    <text x="${mx + 87}" y="${my + 79}" text-anchor="middle" font-family="${SANS}" font-size="14" font-weight="600" fill="${C.white}">Играть</text>
-
-    <!-- переключатель -->
-    <rect x="${mx + 222}" y="${my + 62}" width="56" height="26" rx="13" fill="${C.deep}">
-      <animate attributeName="fill" values="${C.deep};${C.purple};${C.purple};${C.deep};${C.deep}" keyTimes="0;.1;.5;.6;1" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="${mx + 235}" cy="${my + 75}" r="9" fill="${C.white}">
-      <animate attributeName="cx" values="${mx + 235};${mx + 265};${mx + 265};${mx + 235};${mx + 235}" keyTimes="0;.1;.5;.6;1" dur="4s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- ползунок -->
-    <rect x="${mx + 22}" y="${my + 122}" width="256" height="4" rx="2" fill="${C.line}"/>
-    <rect x="${mx + 22}" y="${my + 122}" width="60" height="4" rx="2" fill="${C.lilac}">
-      <animate attributeName="width" values="60;210;60" dur="5s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="${mx + 82}" cy="${my + 124}" r="8" fill="${C.white}" stroke="${C.purple}" stroke-width="3">
-      <animate attributeName="cx" values="${mx + 82};${mx + 232};${mx + 82}" dur="5s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- прогресс -->
-    <text x="${mx + 22}" y="${my + 162}" font-family="${MONO}" font-size="11" fill="${C.muted}">загрузка</text>
-    <rect x="${mx + 22}" y="${my + 172}" width="256" height="8" rx="4" fill="${C.line}"/>
-    <rect x="${mx + 22}" y="${my + 172}" width="0" height="8" rx="4" fill="url(#btn)">
-      <animate attributeName="width" values="0;256;256;0" keyTimes="0;.7;.9;1" dur="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="${mx + 266}" cy="${my + 157}" r="7" stroke="${C.lilac}" stroke-width="2" stroke-dasharray="30 14">
-      <animateTransform attributeName="transform" type="rotate" from="0 ${mx + 266} ${my + 157}" to="360 ${mx + 266} ${my + 157}" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-  </g>`;
+  <rect x="${mx}" y="${my}" width="${mw}" height="${mh}" rx="16" fill="${C.space}" stroke="${C.line}"/>
+  <rect x="${mx}" y="${my}" width="${mw}" height="${mh}" rx="16" fill="url(#wall)"/>
+  ${win}
+  <rect x="${dockX}" y="${dockY - 36}" width="${dockW}" height="40" rx="14" fill="${C.card}" fill-opacity=".85" stroke="${C.line}"/>
+  ${dock}`;
 
   const desc = p.desc.map((l, i) =>
     `<text x="48" y="${170 + i * 24}" font-family="${SANS}" font-size="15" fill="${C.pale}">${esc(l)}</text>`).join("");
@@ -248,7 +256,7 @@ function yudui() {
   return svg(W, H, `
   ${frame(W, H, "yu", { glow: true })}
   <defs>
-    <linearGradient id="btn" x1="0" x2="1"><stop offset="0" stop-color="${C.purple}"/><stop offset="1" stop-color="${C.bright}"/></linearGradient>
+    <radialGradient id="wall" cx=".7" cy=".1" r="1"><stop offset="0" stop-color="${C.purple}" stop-opacity=".35"/><stop offset="1" stop-color="${C.purple}" stop-opacity="0"/></radialGradient>
     <linearGradient id="yt" gradientUnits="userSpaceOnUse" x1="48" y1="0" x2="250" y2="0" spreadMethod="reflect">
       <stop offset="0" stop-color="${C.white}"/><stop offset=".45" stop-color="${C.pale}"/><stop offset=".5" stop-color="${C.bright}"/><stop offset=".55" stop-color="${C.pale}"/><stop offset="1" stop-color="${C.white}"/>
       <animateTransform attributeName="gradientTransform" type="translate" values="-220 0;220 0" dur="4s" repeatCount="indefinite"/>
@@ -258,9 +266,9 @@ function yudui() {
   </defs>
   <g clip-path="url(#yc)">
     ${stars(40, 10, 10, W - 20, H - 20, 1.1)}
-    <ellipse cx="${mx + mw / 2}" cy="${my + mh / 2}" rx="220" ry="150" stroke="${C.line}" stroke-dasharray="2 8"/>
+    <ellipse cx="${mx + mw / 2}" cy="${my + mh / 2}" rx="225" ry="160" stroke="${C.line}" stroke-dasharray="2 8"/>
     <circle r="4" fill="${C.lilac}">
-      <animateMotion dur="14s" repeatCount="indefinite" path="M${mx + mw / 2 - 220} ${my + mh / 2} a220 150 0 1 1 440 0 a220 150 0 1 1 -440 0"/>
+      <animateMotion dur="14s" repeatCount="indefinite" path="M${mx + mw / 2 - 225} ${my + mh / 2} a225 160 0 1 1 450 0 a225 160 0 1 1 -450 0"/>
     </circle>
     ${comet(860, 20, 80, 8, 3)}
   </g>
@@ -268,10 +276,12 @@ function yudui() {
 
   <rect x="48" y="44" width="104" height="24" rx="12" fill="${C.deep}"/>
   <text x="100" y="60" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${C.pale}" letter-spacing="2">✦ FEATURED</text>
+  <rect x="160" y="44" width="84" height="24" rx="12" stroke="${C.purple}"/>
+  <text x="202" y="60" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${C.lilac}" letter-spacing="1">соавтор</text>
   <text x="46" y="128" font-family="${SANS}" font-size="56" font-weight="700" fill="url(#yt)" letter-spacing="1">${esc(p.title)}</text>
   ${desc}
   ${pills(p.tags, 48, 262)}
-  <text x="48" y="314" font-family="${MONO}" font-size="12" fill="${C.muted}">github.com/${USER}/${esc(p.title)}  →</text>`);
+  <text x="48" y="314" font-family="${MONO}" font-size="12" fill="${C.muted}">github.com/${esc(p.repo)}  →</text>`);
 }
 
 // ---------- YudCore: вторая карточка ----------
